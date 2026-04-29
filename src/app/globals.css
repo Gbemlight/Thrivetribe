@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-container {
+    @apply py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-jade-green/5 via-transparent to-vibrant-orange/5;
+  }
+
+  .btn-primary {
+    @apply bg-jade-green text-white px-8 py-4 rounded-full font-bold 
+           hover:bg-[#00563B] transition-all duration-300 
+           shadow-lg hover:shadow-jade-green/20 inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-dark-gray px-8 py-4 rounded-full font-bold 
+           border-2 border-dark-gray hover:bg-dark-gray hover:text-white 
+           transition-all duration-300 inline-flex items-center justify-center;
+  }
+}
+
+:root {
+  --foreground-rgb: 17, 24, 39;
+  --background-start-rgb: 249, 250, 251;
+  --background-end-rgb: 255, 255, 255;
+}

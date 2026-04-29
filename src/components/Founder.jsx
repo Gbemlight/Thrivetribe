@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
+import Image from 'next/image';
 import img from "../assets/feranmi.jpeg"
 
 const Founder = () => {
@@ -17,10 +18,10 @@ const Founder = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] mb-4">
-            Meet the <span className="text-[#03C03C]">Founder</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-dark-gray mb-4">
+            Meet the <span className="text-jade-green">Founder</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#03C03C] to-[#FFA500] mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-jade-green to-vibrant-orange mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -33,19 +34,20 @@ const Founder = () => {
           >
             <div className="relative">
               {/* Founder Image */}
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[#03C03C] to-[#00563B] flex items-center justify-center shadow-2xl">
-                <div className="w-60 h-60 sm:w-76 sm:h-76 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  <img 
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-jade-green to-emerald-depths flex items-center justify-center shadow-2xl">
+                <div className="relative w-60 h-60 sm:w-76 sm:h-76 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                  <Image 
                     src={img} 
                     alt="Oluwaferanmi Famawode - Founder of The Thrive Tribe"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#FFA500] rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#03C03C] rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-vibrant-orange rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-jade-green rounded-full opacity-20 blur-xl"></div>
             </div>
           </motion.div>
 
@@ -57,17 +59,17 @@ const Founder = () => {
             className="text-center md:text-left"
           >
             <div className="mb-6">
-              <h3 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-2">
+              <h3 className="text-3xl sm:text-4xl font-bold text-dark-gray mb-2">
                 Oluwaferanmi Famawode
               </h3>
-              <p className="text-xl text-[#03C03C] font-semibold">
+              <p className="text-xl text-jade-green font-semibold">
                 Founder & Chief Growth Officer
               </p>
             </div>
 
             <div className="relative">
-              <Quote className="absolute -top-2 -left-2 w-8 h-8 text-[#03C03C]/20" />
-              <p className="text-lg text-[#6B7280] leading-relaxed mb-6 pl-6">
+              <Quote className="absolute -top-2 -left-2 w-8 h-8 text-jade-green/20" />
+              <p className="text-lg text-mid-gray leading-relaxed mb-6 pl-6">
                 Oluwaferanmi Famawode is a Nigerian youth leader, speaker, and
                 creative entrepreneur passionate about raising a generation of
                 purpose-driven young people. Known for his strong voice in
@@ -88,8 +90,8 @@ const Founder = () => {
               </p>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#03C03C]/10 to-[#00563B]/10 rounded-full border-2 border-[#03C03C]/20">
-              <span className="text-sm font-semibold text-[#111827]">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-jade-green/10 to-emerald-depths/10 rounded-full border-2 border-jade-green/20">
+              <span className="text-sm font-semibold text-dark-gray">
                 "Together, we become more than we were yesterday."
               </span>
             </div>
@@ -103,29 +105,29 @@ const Founder = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8"
         >
-          <div className="text-center p-6 bg-gradient-to-br from-[#03C03C]/5 to-[#00563B]/5 rounded-2xl border border-[#03C03C]/10">
-            <p className="text-3xl sm:text-4xl font-bold text-[#03C03C] mb-2">
+          <div className="text-center p-6 bg-gradient-to-br from-jade-green/5 to-emerald-depths/5 rounded-2xl border border-jade-green/10">
+            <p className="text-3xl sm:text-4xl font-bold text-jade-green mb-2">
               Growth
             </p>
-            <p className="text-sm text-[#6B7280]">
+            <p className="text-sm text-mid-gray">
               Committed to continuous learning
             </p>
           </div>
 
-          <div className="text-center p-6 bg-gradient-to-br from-[#03C03C]/5 to-[#00563B]/5 rounded-2xl border border-[#03C03C]/10">
-            <p className="text-3xl sm:text-4xl font-bold text-[#03C03C] mb-2">
+          <div className="text-center p-6 bg-gradient-to-br from-jade-green/5 to-emerald-depths/5 rounded-2xl border border-jade-green/10">
+            <p className="text-3xl sm:text-4xl font-bold text-jade-green mb-2">
               Community
             </p>
-            <p className="text-sm text-[#6B7280]">
+            <p className="text-sm text-mid-gray">
               Building tribes that thrive together
             </p>
           </div>
 
-          <div className="text-center p-6 bg-gradient-to-br from-[#03C03C]/5 to-[#00563B]/5 rounded-2xl border border-[#03C03C]/10">
-            <p className="text-3xl sm:text-4xl font-bold text-[#03C03C] mb-2">
+          <div className="text-center p-6 bg-gradient-to-br from-jade-green/5 to-emerald-depths/5 rounded-2xl border border-jade-green/10">
+            <p className="text-3xl sm:text-4xl font-bold text-jade-green mb-2">
               Impact
             </p>
-            <p className="text-sm text-[#6B7280]">
+            <p className="text-sm text-mid-gray">
               Creating lasting transformation
             </p>
           </div>
