@@ -202,7 +202,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Our <span className="text-jade-green">Mission</span>
+              Our <span className="text-jade-green">Impact</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               We exist to empower individuals to unlock their full potential through community, 
