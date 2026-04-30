@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Users, Target, Zap, BookOpen, Heart, Globe, Sparkles, Lightbulb, Compass, Handshake, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const features = [
@@ -208,9 +209,9 @@ export default function Home() {
               We exist to empower individuals to unlock their full potential through community, 
               education, and intentional action. Together, we rise.
             </p>
-            <a href="/about" className="inline-flex items-center text-jade-green font-medium hover:underline">
+            <Link href="/about" className="inline-flex items-center text-jade-green font-medium hover:underline">
               Learn more about us <span className="ml-2">→</span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-6">
             <motion.div 
@@ -246,12 +247,12 @@ export default function Home() {
             Join thousands of ambitious individuals who are already on their growth journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/community" className="btn-primary text-lg px-8 py-4">
+            <Link href="/community" className="btn-primary text-lg px-8 py-4">
               Join The Community
-            </a>
-            <a href="/donations" className="btn-secondary text-lg px-8 py-4">
+            </Link>
+            <Link href="/donations" className="btn-secondary text-lg px-8 py-4">
               Support Our Mission
-            </a>
+            </Link>
           </div>
         </div>
       </Section>

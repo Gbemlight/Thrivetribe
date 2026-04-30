@@ -3,6 +3,7 @@ import Section from '../../components/Section';
 import Card from '../../components/Card';
 import { motion } from 'framer-motion';
 import { Users, MessageCircle, Calendar, Video } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CommunityPage() {
   const features = [
@@ -30,8 +31,6 @@ export default function CommunityPage() {
 
   return (
     <main>
-      {/*
-      Hero
       <Section className="text-center min-h-[60vh] flex items-center">
         <div className="max-w-4xl mx-auto">
           <motion.h1 
@@ -52,7 +51,7 @@ export default function CommunityPage() {
         </div>
       </Section>
 
-      Features
+      {/* Features */}
       <Section>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-dark-gray mb-6">Community <span className="text-jade-green">Benefits</span></h2>
@@ -67,7 +66,7 @@ export default function CommunityPage() {
         </div>
       </Section>
 
-      Stats
+      {/* Stats */}
       <Section background="dark">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
@@ -89,19 +88,18 @@ export default function CommunityPage() {
         </div>
       </Section>
 
-      CTA
+      {/* CTA */}
       <Section>
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Become part of something <span className="text-jade-green">bigger</span></h2>
           <p className="text-xl text-mid-gray mb-10">
             Join the Thrive Tribe today and start your growth journey with thousands of like-minded individuals.
           </p>
-          <a href="/donations" className="btn-primary text-lg px-8 py-4">
+          <Link href="/donations" className="btn-primary text-lg px-8 py-4">
             Join Now
-          </a>
+          </Link>
         </div>
       </Section>
-      */}
     </main>
   );
 }

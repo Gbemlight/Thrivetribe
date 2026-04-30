@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
@@ -9,6 +9,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
+
+  // Close mobile menu automatically when the route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -84,52 +89,33 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100"
-          >
-            <div className="px-4 py-6 space-y-2">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                      isActive(link.href) 
-                        ? 'bg-jade-green/10 text-jade-green' 
-                        : 'text-dark-gray hover:bg-gray-50'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.05 }}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20">
+          <div className="px-4 py-6 space-y-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-4 rounded-xl text-base font-medium transition-colors ${
+                  isActive(link.href) 
+                    ? 'bg-jade-green/10 text-jade-green' 
+                    : 'text-dark-gray hover:bg-gray-50'
+                }`}
               >
-                <Link
-                  href="/donations"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center bg-jade-green text-white py-4 rounded-xl font-semibold mt-4"
-                >
-                  Join the Tribe
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="/donations"
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-center bg-jade-green text-white py-4 rounded-xl font-bold mt-4"
+            >
+              Join the Tribe
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
