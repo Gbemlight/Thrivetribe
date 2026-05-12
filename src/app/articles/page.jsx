@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 // Centralized data for articles
-export const articles = [
+const articles = [
   {
     id: "intentional-growth",
     title: "The Art of Intentional Growth",

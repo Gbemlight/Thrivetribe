@@ -1,5 +1,6 @@
 'use client';
 import Section from '../../components/Section';
+import Link from 'next/link';
 import Card from '../../components/Card';
 import { motion } from 'framer-motion';
 import { Handshake, Heart, Star, Users } from 'lucide-react';
@@ -30,7 +31,6 @@ export default function CollaborationsPage() {
 
   return (
     <main>
-      {/*
       Hero
       <Section className="text-center min-h-[60vh] flex items-center">
         <div className="max-w-4xl mx-auto">
@@ -74,12 +74,11 @@ export default function CollaborationsPage() {
           <p className="text-xl text-gray-300 mb-10">
             Interested in collaborating? We'd love to hear from you.
           </p>
-          <a href="/community" className="btn-primary text-lg px-8 py-4">
+          <Link href="/community" className="btn-primary text-lg px-8 py-4">
             Get In Touch
-          </a>
+          </Link>
         </div>
       </Section>
-      */}
     </main>
   );
 }
