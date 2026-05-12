@@ -21,6 +21,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/services/page.js"
     ],
+    "/articles/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/articles/page.js"
+    ],
     "/community/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -30,11 +35,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/collaborations/page.js"
-    ],
-    "/donations/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/donations/page.js"
     ]
   }
 }
